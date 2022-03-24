@@ -1,0 +1,19 @@
+* step one- styles
+Create stylesheet containing room for player and dealer deck, as well as  buttons that clearly display the 
+options to deal, hit, and stand
+
+* step two- planning
+Draw a theoretical page that explains what every element would be doing and starts to flesh out what tools 
+are necessary for this project. For this I used the sample styles that were provided
+
+* step three- dealing
+Create a function that deals two unidentified cards to the player and two to the dealer (optional: one of the dealer's cards is not visible until the player makes their first move)
+    >create an event listener that listens for click, and tell it to run the function "toDeal" on the click
+    >toDeal will add two card objects to the playerDeck and dealerDeck arrays
+
+* step four - creating the deck
+Create a function that makes a deck containing all 52 cards. 
+For some reason it was very hard for me to conceptualize dealing the cards without creating them first so I decided to do this first and come back to dealing them 
+
+* step four - dealing part two
+Using the deck function create a function that deals two cards to each hand
