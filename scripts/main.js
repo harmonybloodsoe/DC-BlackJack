@@ -4,11 +4,19 @@ window.addEventListener('DOMContentLoaded', function() {
   var dealerHand = [];
   var deck = [];
 
-  const dealButton = document.getElementById('deal-button');
-  dealButton.addEventListener('click', toDeal);
-  function toDeal(){
-
+  function createDeck(){
+    let suits = ["hearts", "spades", "diamonds", "spades"];
+    deckMaker = () =>{ for (let i = 0; i<suits.length; i++){
+      console.log(i);
+    
+    };
   };
+  createDeck();
+  // const dealButton = document.getElementById('deal-button');
+  // dealButton.addEventListener('click', toDeal);
+  // function toDeal(){
+
+  // };
 
 
 
@@ -27,4 +35,4 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   
-})
+});
