@@ -1,3 +1,5 @@
+const { type } = require("express/lib/response");
+
 var yourHand = [];
 var dealerHand = [];
 var deck = [];
@@ -21,6 +23,20 @@ function createDeck(){
         }
     };
 
+    function faceCard(face){
+        let faceRanks= {
+            1: 'ace',
+            11: 'jack', 
+            12: 'queen',
+            13: 'king', 
+        };
+        face.img= `images/${faceRanks[face.rank]}_of_${face.suit}.png`;
+    };
+
+   for (let i=0; i<deck.length; i++){  
+       if (deck[i].rank==1 || deck[i].rank>10) faceCard(deck[i]);
+    }
+ 
 };
 createDeck();
 
@@ -34,10 +50,8 @@ function fisherYates (myArray) {
        myArray[j] = tempi;
     };
 };
-fisherYates(deck);
-//shuffle deck
 
-function toDeal(player, cardNum){
+function toDeal(player, cardNum=2){
     for (let i=0; i < cardNum; i++){
         let newCard = deck.shift();
         player.push(newCard);
@@ -45,6 +59,3 @@ function toDeal(player, cardNum){
 };
 
 console.log(deck);
-toDeal(yourHand, 2);
-console.log(deck);
-console.log(yourHand);

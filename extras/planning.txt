@@ -13,7 +13,10 @@ Create a function that deals two unidentified cards to the player and two to the
 
 * step four - creating the deck
 Create a function that makes a deck containing all 52 cards. 
-For some reason it was very hard for me to conceptualize dealing the cards without creating them first so I decided to do this first and come back to dealing them 
+For some reason it was very hard for me to conceptualize dealing the cards without creating them first so I decided to do this first and come back to dealing them.
+    >create a object constructor that creates a card object with the properties of rank, suit, and an img file string that is created from the interpolated strings of rank and suit (these will correspond to the image names in another file)
+    >add a nested for loop that creates 13 card objects for every suit and pushes it into the empty deck array
+    >faceCard function will change the img file name for the face cards 
 
 * step four - dealing part two
 Using the deck function create a function that deals two cards to each hand
