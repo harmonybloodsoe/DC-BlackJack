@@ -24,4 +24,4 @@ decided to do this first and come back to dealing them.
 
 * step four - dealing part two
 Using the deck function create a function that deals one card to each hand on default but can deal any amount 
-of cards to any player
+of cards to any player. This will serve for the hit button as well
