@@ -7,16 +7,21 @@ Draw a theoretical page that explains what every element would be doing and star
 are necessary for this project. For this I used the sample styles that were provided
 
 * step three- dealing
-Create a function that deals two unidentified cards to the player and two to the dealer (optional: one of the dealer's cards is not visible until the player makes their first move)
+Create a function that deals two unidentified cards to the player and two to the dealer (optional: one of the 
+dealer's cards is not visible until the player makes their first move)
     >create an event listener that listens for click, and tell it to run the function "toDeal" on the click
     >toDeal will add two card objects to the playerDeck and dealerDeck arrays
 
 * step four - creating the deck
 Create a function that makes a deck containing all 52 cards. 
-For some reason it was very hard for me to conceptualize dealing the cards without creating them first so I decided to do this first and come back to dealing them.
-    >create a object constructor that creates a card object with the properties of rank, suit, and an img file string that is created from the interpolated strings of rank and suit (these will correspond to the image names in another file)
+For some reason it was very hard for me to conceptualize dealing the cards without creating them first so I 
+decided to do this first and come back to dealing them.
+    >create a object constructor that creates a card object with the properties of rank, suit, and an img file 
+    string that is created from the interpolated strings of rank and suit (these will correspond to the image 
+    names in another file)
     >add a nested for loop that creates 13 card objects for every suit and pushes it into the empty deck array
     >faceCard function will change the img file name for the face cards 
 
 * step four - dealing part two
-Using the deck function create a function that deals two cards to each hand
+Using the deck function create a function that deals one card to each hand on default but can deal any amount 
+of cards to any player
