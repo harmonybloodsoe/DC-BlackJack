@@ -25,3 +25,12 @@ decided to do this first and come back to dealing them.
 * step four - dealing part two
 Using the deck function create a function that deals one card to each hand on default but can deal any amount 
 of cards to any player. This will serve for the hit button as well
+
+*step five - scoring
+Using the information gathered from card data, I will calculate the current score of
+each player
+    >loop through the cards in each players hand and get the rank value of each card
+    in the deck
+    >scoreKeep calculates the score of each player and automatically chooses the ace value
+    based off of how many points the player has (may change this later so that player
+    can choose what they want their ace to be worth)
