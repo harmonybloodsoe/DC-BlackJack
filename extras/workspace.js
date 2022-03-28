@@ -90,4 +90,3 @@ if (yourScore == 21 || dealerScore > 21){
 else if (yourScore > 21 || dealerScore == 21){
     winner = "dealer";
 }
-
