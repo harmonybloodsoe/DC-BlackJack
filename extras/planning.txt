@@ -34,3 +34,13 @@ each player
     >scoreKeep calculates the score of each player and automatically chooses the ace value
     based off of how many points the player has (may change this later so that player
     can choose what they want their ace to be worth)
+
+* step six - dom
+Using the Document Object Model, I will connect the HTML offered witht the JavaScript
+I've written. 
+    >add event listeners to the buttons that I will be using and possibly edit the HTML
+    to be able to accomodate the images I will be adding into it
+    >when the deal button is pushed, the function toDeal will deal each player two cards.
+    those cards will be made visible to the viewer with DOM. 
+    >when the buttons for deal, hit, and stand are clicked, functions trigger the 
+    logic that will make the game work
