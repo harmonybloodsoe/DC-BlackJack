@@ -115,7 +115,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
   function dealMe (){
     toDeal(yourHand, 2);
+    scoreKeep(yourHand, yourScore);
     toDeal(dealerHand, 2);
+    scoreKeep(dealerHand, dealerScore);
     // hideMe();
     // yourHand.forEach(element=>{
     //   let img = document.createElement('img');
