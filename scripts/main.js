@@ -108,8 +108,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   let yourCards = document.getElementById('player-hand');
-  let dealerCards = document.getElementById('dealer-hand');
   let dealerPoints = document.getElementById('dealer-points');
+  let dealerCards = document.getElementById('dealer-hand');
   let yourPoints = document.getElementById('player-points');
 // initialized variables for DOM
 
@@ -131,22 +131,28 @@ window.addEventListener('DOMContentLoaded', function() {
     dealerPoints.append(dealerScore);
     console.log("your score "+ yourScore);
     console.log("dealer score "+ dealerScore);
+    console.log("your hand ");
+    console.log(yourHand);
   };  
 // allows deal button to deal shuffled cards
 
   function hitMe (){
     console.log("new dealer score "+dealerScore);
-    toDeal(yourHand, yourScore);
-    toDeal(dealerHand, dealerScore);
+    toDeal(yourHand);
+    toDeal(dealerHand);
     console.log("new score "+yourScore);
+    console.log("your hand ");
+    console.log(yourHand);
   };
 //
 
   function illStand(){
     console.log("newest dealer score "+dealerScore);
-    toDeal(dealerHand, dealerScore);
-    toDeal(yourHand, yourScore);
+    toDeal(dealerHand);
+    toDeal(yourHand);
     console.log("your newest score "+yourScore);
+    console.log("your hand ");
+    console.log(yourHand);
   };
 
   let dealButton = document.getElementById('deal-button');
