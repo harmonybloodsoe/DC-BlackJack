@@ -75,11 +75,20 @@ window.addEventListener('DOMContentLoaded', function() {
           player === dealerHand ? dealerScore = score : yourScore = score;
           console.log(score);
       });
+      if (yourScore == 21 || dealerScore > 21){
+        winner = "player";
+        return winner;
+      }
+      else if (yourScore > 21 || dealerScore == 21){
+        winner = "dealer";
+        return winner;
+    }
+  // determines winner
   };
 //keeps score by apply 10 points for any face cards and either 1 or
 //11 points for an ace depending on the player score prior
 
-  function toDeal(player, score, cardNum=1){
+  function toDeal(player, cardNum=1){
 
       for (let i=0; i < cardNum; i++){
           let newCard = deck.shift();
@@ -88,8 +97,6 @@ window.addEventListener('DOMContentLoaded', function() {
           img.src = newCard.img;
           player === dealerHand ? dealerCards.appendChild(img) : yourCards.appendChild(img);
       };
-      scoreKeep(player, score);
-      console.log(score);
   };
 //deals cards to any player
 
@@ -97,15 +104,8 @@ window.addEventListener('DOMContentLoaded', function() {
   //   let firstCard = document.querySelector('div.dealer-hand img');
   //   firstCard.src = 'https://i.pinimg.com/564x/72/13/e1/7213e1a55a3c0c73d5864e14ba1aa7dc.jpg'
   // }
-  //makes first crd that dealer is dealt invisible until after 1st move is made
+  //makes first card that dealer is dealt invisible until after 1st move is made
 
-  if (yourScore == 21 || dealerScore > 21){
-      winner = "player";
-  }
-  else if (yourScore > 21 || dealerScore == 21){
-      winner = "dealer";
-  }
-// determines winner
 
   let yourCards = document.getElementById('player-hand');
   let dealerCards = document.getElementById('dealer-hand');
@@ -114,8 +114,8 @@ window.addEventListener('DOMContentLoaded', function() {
 // initialized variables for DOM
 
   function dealMe (){
-    toDeal(yourHand, yourScore, 2);
-    toDeal(dealerHand, dealerScore, 2);
+    toDeal(yourHand, 2);
+    toDeal(dealerHand, 2);
     // hideMe();
     // yourHand.forEach(element=>{
     //   let img = document.createElement('img');
@@ -142,8 +142,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
   function illStand(){
     console.log("newest dealer score "+dealerScore);
-    toDeal(yourHand, yourScore);
     toDeal(dealerHand, dealerScore);
+    toDeal(yourHand, yourScore);
     console.log("your newest score "+yourScore);
   };
 

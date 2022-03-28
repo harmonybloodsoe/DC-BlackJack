@@ -44,3 +44,8 @@ I've written.
     those cards will be made visible to the viewer with DOM. 
     >when the buttons for deal, hit, and stand are clicked, functions trigger the 
     logic that will make the game work
+
+* step seven - debugging
+At this point there are many errors that need to be sorted out.  The right amount of cards
+is not always drawn with every click, the points system does not always work, and the old cards
+drawn from the last game do not automatically disappear when starting a new one. 
