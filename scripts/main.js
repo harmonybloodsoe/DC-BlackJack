@@ -114,6 +114,7 @@ window.addEventListener('DOMContentLoaded', function() {
 // initialized variables for DOM
 
   function dealMe (){
+    yourCards.childNodes= "";
     toDeal(yourHand, 2);
     scoreKeep(yourHand, yourScore);
     toDeal(dealerHand, 2);
