@@ -73,6 +73,7 @@ window.addEventListener('DOMContentLoaded', function() {
               score += element.rank;
           };
           player === dealerHand ? dealerScore = score : yourScore = score;
+          console.log(score);
       });
   };
 //keeps score by apply 10 points for any face cards and either 1 or
@@ -83,11 +84,20 @@ window.addEventListener('DOMContentLoaded', function() {
       for (let i=0; i < cardNum; i++){
           let newCard = deck.shift();
           player.push(newCard);
+          let img = document.createElement('img');
+          img.src = newCard.img;
+          player === dealerHand ? dealerCards.appendChild(img) : yourCards.appendChild(img);
       };
       scoreKeep(player, score);
+      console.log(score);
   };
 //deals cards to any player
 
+  // function hideMe(){
+  //   let firstCard = document.querySelector('div.dealer-hand img');
+  //   firstCard.src = 'https://i.pinimg.com/564x/72/13/e1/7213e1a55a3c0c73d5864e14ba1aa7dc.jpg'
+  // }
+  //makes first crd that dealer is dealt invisible until after 1st move is made
 
   if (yourScore == 21 || dealerScore > 21){
       winner = "player";
@@ -106,14 +116,15 @@ window.addEventListener('DOMContentLoaded', function() {
   function dealMe (){
     toDeal(yourHand, yourScore, 2);
     toDeal(dealerHand, dealerScore, 2);
-    yourHand.forEach(element=>{
-      let img = document.createElement('img');
-      img.src = element.img;
-      yourCards.appendChild(img);
-      });
-    let img = document.createElement('img');
-    img.src = dealerHand[0].img;
-    dealerCards.appendChild(img);
+    // hideMe();
+    // yourHand.forEach(element=>{
+    //   let img = document.createElement('img');
+    //   img.src = element.img;
+    //   yourCards.appendChild(img);
+    //   });
+    // let img = document.createElement('img');
+    // img.src = dealerHand[0].img;
+    // dealerCards.appendChild(img);
     yourPoints.append(yourScore);
     dealerPoints.append(dealerScore);
     console.log("your score "+ yourScore);
@@ -144,18 +155,6 @@ window.addEventListener('DOMContentLoaded', function() {
   
   let standButton = document.getElementById('stand-button');
   standButton.addEventListener('click', illStand)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   
