@@ -95,7 +95,13 @@ window.addEventListener('DOMContentLoaded', function() {
           player.push(newCard);
           let img = document.createElement('img');
           img.src = newCard.img;
-          player === dealerHand ? dealerCards.appendChild(img) : yourCards.appendChild(img);
+          // if (yourCards == ""){
+            player === dealerHand ? dealerCards.appendChild(img) : yourCards.appendChild(img);
+          // }
+          // else{
+          //   player === dealerHand ? dealerCards.src = newCard.img : yourCards.src = newCard.img;
+          // }
+          
       };
   };
 //deals cards to any player
@@ -114,7 +120,6 @@ window.addEventListener('DOMContentLoaded', function() {
 // initialized variables for DOM
 
   function dealMe (){
-    yourCards.childNodes= "";
     toDeal(yourHand, 2);
     scoreKeep(yourHand, yourScore);
     toDeal(dealerHand, 2);
